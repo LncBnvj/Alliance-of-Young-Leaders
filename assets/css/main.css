@@ -1,0 +1,22 @@
+/* Inside assets/css/main.css */
+@import "./base/variables.css";
+@import "./base/reset.css";
+@import "./base/utilities.css";
+@import "./base/animation.css";
+
+@import "./layout/navbar.css";
+@import "./layout/sections.css";
+@import "./layout/footer.css";
+
+@import "./pages/hero.css";
+@import "./pages/about.css";
+@import "./pages/mission.css";
+@import "./pages/officers.css";
+@import "./pages/committees.css";
+@import "./pages/members.css";
+@import "./pages/program.css";
+@import "./pages/gallery.css";
+@import "./pages/lightbox.css";
+@import "./pages/join.css";
+@import "./pages/back-to-top.css";
+@import "./pages/contact.css";
