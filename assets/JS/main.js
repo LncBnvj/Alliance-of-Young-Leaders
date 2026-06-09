@@ -9,6 +9,7 @@ import { initStaggerCards } from './animations/staggerCards.js';
 import { initActiveNav } from './core/activeNav.js';
 import { initNavbar } from './core/navbar.js';
 import { initLogoText } from './core/logoText.js';
+import { initOfficers } from './core/officers.js';
 import { initScrollProgress } from './core/scrollProgress.js';
 import { initSmoothScroll } from './core/smoothScroll.js';
 
@@ -40,7 +41,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadComponent('lightbox-container', './components/lightbox.html'),
   ]);
   
+
   console.log('✅ Components loaded');
+
+  await initOfficers();
 
   // ── INIT SYSTEMS ──
   const updateNavbar = initNavbar?.() || (() => {});
