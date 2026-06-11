@@ -12,6 +12,7 @@ import { initGallery } from './core/gallery.js';
 import { initNavbar } from './core/navbar.js';
 import { initLogoText } from './core/logoText.js';
 import { initOfficers } from './core/officers.js';
+import { initDirectors } from './core/directors.js';
 import { initPrograms } from './core/programs.js';
 import { initScrollProgress } from './core/scrollProgress.js';
 import { initSmoothScroll } from './core/smoothScroll.js';
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadComponent('about-container', './components/about.html'),
     loadComponent('mission-container', './components/mission.html'),
     loadComponent('officers-container', './components/officers.html'),
+    loadComponent('directors-container', './components/directors.html'),
     loadComponent('committees-container', './components/committees.html'),
     loadComponent('members-container', './components/members.html'),
     loadComponent('program-container', './components/program.html'),
@@ -48,6 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log('✅ Components loaded');
 
   await initOfficers();
+  await initDirectors();
   await initCommittees();
   await initGallery();
   await initPrograms();

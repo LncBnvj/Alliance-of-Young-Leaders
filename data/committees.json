@@ -1,58 +1,195 @@
 [
   {
-    "title": "Research Committee",
-    "icon": "fas fa-microscope",
-    "chair": "[ Chair Name ]",
-    "desc": "Conducts research to support evidence-based programs, policy recommendations, and organizational decision-making.",
+    "title": "Committee on Kapaligiran (Environment and Sustainability)",
+    "subtitle": "Environment and Sustainability",
+    "logo": "assets/img/Committees Logo/ENVIRONMENT.png",
+    "chair": { "name": "Juan Dela Cruz", "photo": "./assets/img/officers/juan_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Maria Santos", "photo": "./assets/img/officers/maria_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
+    "secretary": { "name": "Arnel Pineda", "photo": "./assets/img/officers/arnel_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
+    "desc": "Spearheads environmental conservation initiatives, climate action campaigns, and sustainable community programs.",
+    "mission": "To mobilize youth-led ecological frameworks that advocate for carbon reduction, zero-waste practices, and robust local biodiversity protection across regional networks.",
+    "movement": "Project Verde: A national tree-growing campaign and comprehensive plastic neutrality drive launched across local coastal barangays.",
     "delay": 1,
-    "members": ["[ Member 1 ]", "[ Member 2 ]", "[ Member 3 ]", "[ Member 4 ]"]
+    "members": [
+      { "name": "Janice De Belen", "photo": "./assets/img/officers/janice.jpg", "socials": { "fb": "#", "li": "#" } },
+      { "name": "Ramon Bautista", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Geo Ong", "photo": "./assets/img/officers/geo.jpg", "socials": { "fb": "#", "li": "#" } }
+    ]
   },
   {
-    "title": "Projects Committee",
-    "icon": "fas fa-project-diagram",
-    "chair": "[ Chair Name ]",
-    "desc": "Plans, coordinates, and executes AYL's community outreach and leadership development projects from start to finish.",
+    "title": "Committee on Kaayusan (Peace, Order, and Good Governance)",
+    "subtitle": "Peace, Order, and Good Governance",
+    "logo": "assets/img/Committees Logo/PEACE AND ORDER & GOOD GOVERNANCE.png",
+    "chair": { "name": "Mark Aquino", "photo": "./assets/img/officers/mark_kaayusan.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Luzviminda Dimagiba", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Reynaldo Reyes", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Promotes leadership integrity, policy alignment, civic responsibility, and youth participation in local governance.",
+    "mission": "To cultivate absolute transparency, civic literacy, and ethical accountability frameworks within student councils and youth grassroots associations.",
+    "movement": "The Kabataan Katapatan Initiative: A series of national youth leadership integrity forums and active local ordinance monitoring workshops.",
     "delay": 2,
-    "members": ["[ Member 1 ]", "[ Member 2 ]", "[ Member 3 ]", "[ Member 4 ]"]
+    "members": [
+      { "name": "Sarah Geronimo", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Christian Bautista", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
   },
   {
-    "title": "Communications",
-    "icon": "fas fa-bullhorn",
-    "chair": "[ Chair Name ]",
-    "desc": "Manages AYL's brand, social media presence, publications, and all internal and external communications strategies.",
+    "title": "Committee on Komunikasyon (Communication and Participation)",
+    "subtitle": "Communication and Participation",
+    "logo": "assets/img/Committees Logo/COMMUNICATION AND PARTICIPATION.png",
+    "chair": { "name": "Patricia Reyes", "photo": "./assets/img/officers/patricia_komunikasyon.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Gregorio Sanchez", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Elena Torres", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Manages public relations, strategic outreach, and community engagement frameworks to bridge the gap between leadership and the youth.",
+    "mission": "To maximize public informational distribution, establish decentralized student feedback systems, and drive cross-channel creative messaging campaigns.",
+    "movement": "AYL Voice Network: A collaborative multimedia publication hub and regional network bulletin launched to unite distant youth chapters.",
     "delay": 3,
-    "members": ["[ Member 1 ]", "[ Member 2 ]", "[ Member 3 ]", "[ Member 4 ]"]
+    "members": [
+      { "name": "Daniel Padilla", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Kathryn Bernardo", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
   },
   {
-    "title": "Membership Committee",
-    "icon": "fas fa-users",
-    "chair": "[ Chair Name ]",
-    "desc": "Recruits, onboards, and nurtures AYL members, ensuring an inclusive, engaged, and growing organizational community.",
+    "title": "Committee on Education and Leadership Development",
+    "subtitle": "Leadership Development",
+    "logo": "assets/img/Committees Logo/EDUCATION AND LEADERSHIP DEVELOPMENT.png",
+    "chair": { "name": "Jonathan Cruz", "photo": "./assets/img/officers/jonathan_education.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Teresa Ramos", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Michael Mendoza", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Organizes capacity-building seminars, skills training workshops, and educational modules to empower the next generation of leaders.",
+    "mission": "To design progressive learning modules, distribute localized study toolkits, and mentor grassroots youth organizations in executive project planning.",
+    "movement": "The Youth Leadership Academy (YLA): A standardized weekend fellowship certificate program targeting prospective student council executives.",
     "delay": 1,
-    "members": ["[ Member 1 ]", "[ Member 2 ]", "[ Member 3 ]", "[ Member 4 ]"]
+    "members": [
+      { "name": "Enrique Gil", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Liza Soberano", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
   },
   {
-    "title": "External Affairs",
-    "icon": "fas fa-handshake",
-    "chair": "[ Chair Name ]",
-    "desc": "Builds and maintains partnerships with other organizations, government bodies, and private sector stakeholders.",
+    "title": "Committee on Partnership and Community Engagement",
+    "subtitle": "Community Engagement",
+    "logo": "assets/img/Committees Logo/PARTNERSHIP AND COMMUNITY ENGAGEMENT.png",
+    "chair": { "name": "Clarissa Mendoza", "photo": "./assets/img/officers/clarissa_partnership.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Vicente Noble", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Francis Castro", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Fosters high-impact institutional alliances, collaborative community programs, and networking pathways with stakeholders.",
+    "mission": "To build sustainable strategic intersections between municipal governance bodies, non-profit institutions, and student council alliances.",
+    "movement": "Sama-Sama Synergy: A structural coalition portal mapping resource-sharing networks to support underfunded public school sectors.",
     "delay": 2,
-    "members": ["[ Member 1 ]", "[ Member 2 ]", "[ Member 3 ]", "[ Member 4 ]"]
+    "members": [
+      { "name": "Joshua Garcia", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Julia Barretto", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
   },
   {
-    "title": "Finance Committee",
-    "icon": "fas fa-coins",
-    "chair": "[ Chair Name ]",
-    "desc": "Supports the Treasurer in financial planning, fundraising initiatives, sponsorship acquisition, and budget monitoring.",
+    "title": "Committee on Health and Wellness",
+    "subtitle": "Public Health & Well-Being",
+    "logo": "assets/img/Committees Logo/health and wellnes.png",
+    "chair": { "name": "Dr. Angela Castro", "photo": "./assets/img/officers/dr_angela_health.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Manuel Villanueva", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Christina Belmonte", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Drives medical outreach drives, public health awareness campaigns, and community nutrition programs to foster wellness.",
+    "mission": "To bridge standard public healthcare information barriers and organize active preventative medical missions within vulnerable sectors.",
+    "movement": "Oplan Kalusugan: A decentralized health awareness caravan focusing on rural first-aid preparedness and pediatric nutrition distributions.",
     "delay": 3,
-    "members": ["[ Member 1 ]", "[ Member 2 ]", "[ Member 3 ]", "[ Member 4 ]"]
+    "members": [
+      { "name": "Gerald Anderson", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Maja Salvador", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
   },
   {
-    "title": "Events Committee",
-    "icon": "fas fa-calendar-alt",
-    "chair": "[ Chair Name ]",
-    "desc": "Conceptualizes and manages AYL's events calendar including assemblies, socials, leadership forums, and major productions.",
+    "title": "Committee on Sports, Arts, and Culture",
+    "subtitle": "Talent and Heritage Development",
+    "logo": "assets/img/Committees Logo/SPORTS, ARTS AND CULTURES.png",
+    "chair": { "name": "Ricardo Gabriel", "photo": "./assets/img/officers/ricardo_sports.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Antonio Laurel", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Felicia Lopez", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Cultivates creative expression, athletic excellence, and cultural heritage preservation through tournaments and art exhibitions.",
+    "mission": "To preserve indigenous local heritage narratives while building competitive sports development paths to counter youth substance vulnerability.",
+    "movement": "The AYL Sining at Lakas Festival: An annual multi-district basketball open paired alongside interactive regional heritage mural installations.",
     "delay": 1,
-    "members": ["[ Member 1 ]", "[ Member 2 ]", "[ Member 3 ]", "[ Member 4 ]"]
+    "members": [
+      { "name": "Dingdong Dantes", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Marian Rivera", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
+  },
+  {
+    "title": "Committee on Disaster Preparedness",
+    "subtitle": "Community Resilience",
+    "logo": "assets/img/Committees Logo/disaster preparedness and community resiliences.png",
+    "chair": { "name": "Ferdinand Santos", "photo": "./assets/img/officers/ferdinand_disaster.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Jaime Bautista", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Maricel Soriano", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Spearheads emergency response training, hazard mapping workshops, and active relief mobilizations to strengthen local resilience.",
+    "mission": "To institutionalize practical climate hazard education and build rapidly deployable youth community disaster response taskforces.",
+    "movement": "Project Handog Ligtas: A dynamic emergency simulation framework deploying customized household emergency bag kits to flood-prone areas.",
+    "delay": 2,
+    "members": [
+      { "name": "Alden Richards", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Maine Mendoza", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
+  },
+  {
+    "title": "Committee on Agriculture",
+    "subtitle": "Food Security & Agri-Tech",
+    "logo": "assets/img/Committees Logo/AGRICULTURE.png",
+    "chair": { "name": "Emmanuel Soriano", "photo": "./assets/img/officers/emmanuel_agriculture.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Pedro Penduko", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Rosa Rosal", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Advocates for modern youth-led agricultural practices, community urban gardens, and sustainable food security pipelines.",
+    "mission": "To reposition sustainable farming structures as an accessible, high-tech venture space for the modern generation of urban youth.",
+    "movement": "The Green Grid Movement: A technical developmental system establishing community hydroponic setups inside low-income residential zones.",
+    "delay": 3,
+    "members": [
+      { "name": "Piolo Pascual", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Sam Milby", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
+  },
+  {
+    "title": "Committee on Mental Health and Well-Being",
+    "subtitle": "Awareness and Well-Being",
+    "logo": "assets/img/Committees Logo/MENTAL HEALTH AND WELL BEING.png",
+    "chair": { "name": "Sofia Valenzuela", "photo": "./assets/img/officers/sofia_mental.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Lucas Alcaraz", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Carmen Miranda", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Destigmatizes mental health discussions by organizing psychological first-aid sessions and wellness safe spaces.",
+    "mission": "To dismantle localized systemic psychological taboos through private group guidance platforms and safe peer-led counseling channels.",
+    "movement": "The SafeSpace Collective: A specialized counseling hotline project backed by digital psychological first-aid toolkit deployment.",
+    "delay": 1,
+    "members": [
+      { "name": "Anne Curtis", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Solenn Heussaff", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
+  },
+  {
+    "title": "Committee on Creatives and Media",
+    "subtitle": "Digital Content & Multimedia Production",
+    "logo": "assets/img/Committees Logo/CREATIVES AND MEDIA.png",
+    "chair": { "name": "Gabriel Villanueva", "photo": "./assets/img/officers/gabriel_creative.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Paolo Ballesteros", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Dominic Roque", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Champions the digital narrative of the alliance, generating visual campaigns, documentation, and multimedia content.",
+    "mission": "To maintain absolute brand alignment and deploy high-production digital visual campaigns that capture AYL's local community footprint.",
+    "movement": "The AYL Lens Project: A comprehensive annual digital storytelling docuseries tracking grassroots member innovations.",
+    "delay": 2,
+    "members": [
+      { "name": "Luis Manzano", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Jessy Mendiola", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
+  },
+  {
+    "title": "Committee on Gender and Development",
+    "subtitle": "Inclusivity and Empowerment",
+    "logo": "assets/img/Committees Logo/GENDER AND DEVELOPMENT.png",
+    "chair": { "name": "Beatriz Dimaculangan", "photo": "./assets/img/officers/beatriz_gender.jpg", "socials": { "fb": "#", "li": "#" } },
+    "viceChair": { "name": "Mariano Rivera", "photo": "", "socials": { "fb": "", "li": "" } },
+    "secretary": { "name": "Justine Win", "photo": "", "socials": { "fb": "", "li": "" } },
+    "desc": "Promotes gender equality, human rights advocacies, and safe, inclusive developmental spaces for all members.",
+    "mission": "To engineer legally supported anti-discrimination policies and construct gender-equal development frameworks within partner communities.",
+    "movement": "The Equality Alliance Forum: A series of intersectional human rights conventions and safe leadership mentorship tracks for LGBTQ+ youth.",
+    "delay": 3,
+    "members": [
+      { "name": "Paul Soriano", "photo": "", "socials": { "fb": "", "li": "" } },
+      { "name": "Richard Gutierrez", "photo": "", "socials": { "fb": "", "li": "" } }
+    ]
   }
 ]

@@ -1,3 +1,7 @@
+/* ==========================================================================
+   HERO COMPONENT STYLES
+   ========================================================================== */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -11,8 +15,11 @@
   padding: 120px 24px 80px;
 }
 
+/* --- Dynamic Background Shapes --- */
 .hero-shapes { 
-  position: absolute; inset: 0; pointer-events: none; 
+  position: absolute; 
+  inset: 0; 
+  pointer-events: none; 
 }
 
 .shape {
@@ -76,12 +83,14 @@
   opacity: 0.12;
 }
 
+/* --- Hero Layout Content --- */
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
 }
 
+/* --- Upper Ribbon Badge --- */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -96,7 +105,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 8px 20px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-full, 50px);
   margin-bottom: 24px;
   animation: fadeDown 0.8s ease 0.2s both;
 }
@@ -108,34 +117,24 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
+/* --- Logo Display Properties --- */
 .hero-logo-display {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-bottom: 24px;
   animation: fadeDown 0.8s ease 0.3s both;
 }
 
-.hero-logo-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(20px);
-  border: 2px solid rgba(255,255,255,0.3);
-  color: var(--white);
-  font-family: var(--font-main);
-  font-weight: 900;
-  font-size: 2.5rem;
-  padding: 12px 24px;
-  border-radius: var(--radius-md);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+.hero-logo-img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+  animation: float Logo 6s ease-in-out infinite;
 }
 
-.hero-logo-mark span:last-child { 
-  color: var(--yellow); 
-}
-
+/* --- Typography Content --- */
 .hero-title {
   font-family: var(--font-main);
   font-size: clamp(2rem, 5vw, 3.5rem);
@@ -160,6 +159,7 @@
   animation: fadeUp 0.8s ease 0.5s both;
 }
 
+/* --- Action Buttons Fixes --- */
 .hero-cta {
   display: flex;
   gap: 16px;
@@ -169,10 +169,22 @@
   animation: fadeUp 0.8s ease 0.6s both;
 }
 
+.hero-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Separates fontawesome icon naturally from text */
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--radius-md, 8px);
+  transition: all 0.3s ease;
+}
+
 .hero-cta .btn-primary {
   background: var(--yellow);
   color: var(--blue-deep);
-  border-color: var(--yellow);
+  border: 1px solid var(--yellow);
   box-shadow: 0 4px 20px rgba(255,215,0,0.4);
 }
 
@@ -184,7 +196,7 @@
 
 .hero-cta .btn-outline {
   color: var(--white);
-  border-color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.5);
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
 }
@@ -194,17 +206,26 @@
   background: rgba(255,255,255,0.15);
 }
 
+/* --- Alignment Fixed Stats Deck --- */
 .hero-stats {
   display: flex;
-  justify-content: center;
+  /* Forces horizontal distribution and forces absolute center alignment */
+  justify-content: space-evenly; 
   align-items: center;
-  background: rgba(255,255,255,0.1);
+  
+  /* Keeps the card centered on the screen */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 800px; /* Limits the container so items don't stretch too far apart */
+  
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: var(--radius-xl);
-  padding: 24px 40px;
-  flex-wrap: wrap;
-  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xl, 16px);
+  padding: 24px 20px; /* Balanced left/right padding */
+  box-sizing: border-box; /* Ensures padding doesn't break layout width calculation */
+  
   animation: fadeUp 0.8s ease 0.7s both;
 }
 
@@ -212,13 +233,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px 32px;
-  position: relative;
+  justify-content: center;
+  flex: 1; /* Gives every single item equal breathing room space */
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Row block binding numbers and symbols securely together */
+.stat-number-wrapper {
+  display: flex;
+  align-items: baseline; /* Ensures + sign locks to base line of the counter numbers */
+  justify-content: center;
 }
 
 .stat-number {
   font-family: var(--font-main);
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: var(--yellow);
   line-height: 1;
@@ -226,27 +256,30 @@
 
 .stat-plus {
   font-family: var(--font-main);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--yellow);
   margin-left: 2px;
+  line-height: 1;
 }
 
 .stat-label {
   font-size: 0.75rem;
   color: rgba(255,255,255,0.65);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-top: 4px;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
 }
 
 .stat-divider {
   width: 1px;
-  height: 48px;
-  background: rgba(255,255,255,0.2);
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0; /* Prevents the lines from squishing or disappearing */
 }
 
+/* --- Scroll Indicator Component --- */
 .hero-scroll-indicator {
   position: absolute;
   bottom: 32px;
@@ -275,4 +308,24 @@
   animation: scrollBounce 2s ease-in-out infinite;
   font-size: 0.75rem;
   color: rgba(255,255,255,0.6);
+}
+
+/* --- Component Specific Keyframe Animations --- */
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* --- Mobile Responsive Rules --- */
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .stat-divider {
+    display: none; /* Safely drops out dividers when layout wraps down to phone screens */
+  }
+  .stat-item {
+    padding: 12px 0;
+  }
 }

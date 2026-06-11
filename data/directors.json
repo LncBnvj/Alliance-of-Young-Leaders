@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Mr. Harold R. Matutina",
+    "position": "Director for Partnership and Sponsorship",
+    "img": "assets/img/Directors/MATUTINA_DRCTRPART&SPONS.jpg",
+    "roleType": "director",
+    "desc": "Establishes institutional alliances and secures strategic corporate sponsorships to support and fund the organization's nationwide initiatives.",
+    "isFeatured": false,
+    "delay": 1,
+    "socials": {
+      "facebook": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Ms.  Fatima Gehana Soliven",
+    "position": "Director for Membership",
+    "img": "assets/img/Directors/SOLIVEN_DRCTRMEM.jpg",
+    "roleType": "director",
+    "desc": "Oversees the onboarding process, retention strategies, and overall welfare of members and regional chapters across the organization.",
+    "isFeatured": false,
+    "delay": 2,
+    "socials": {
+      "facebook": "#",
+      "instagram": "#"
+    }
+  },
+  {
+    "name": "Mr. John Lloyd Balane",
+    "position": "Deputy Director for Membership",
+    "img": "assets/img/Directors/BALANE_DEPDRCTRMEM.jpg",
+    "roleType": "director",
+    "desc": "Assists the Membership Director in managing member databases, tracking applications, and supporting local chapter engagements.",
+    "isFeatured": false,
+    "delay": 3,
+    "socials": {
+      "facebook": "https://www.facebook.com/share/18bDJFQJgQ/",
+      "instagram": "https://www.instagram.com/imjl_enalab?igsh=MXQ2Z2RrN2dlOWthcg=="
+    }
+  },
+  {
+  "name": "Mr. John L. Palangeo",
+  "position": "Director for Project",
+  "img": "assets/img/directors/palangeo_drctrproj.jpg",
+  "roleType": "director",
+  "desc": "Spearheads the conceptualization, planning, and operational execution of the organization's core projects and flagship events.",
+  "isFeatured": false,
+  "delay": 4,
+  "socials": {
+    "facebook": "https://www.facebook.com/whateveryen005",
+    "instagram": "https://www.instagram.com/yen_.005/",
+    "linkedin": "https://www.linkedin.com/in/john-palangeo-46aaa1277/"
+  }
+},
+  {
+    "name": "Mr. Mjay Diploma ",
+    "position": "Director for Legal Affairs",
+    "img": "assets/img/Directors/DIPLOMA_LEGAL.jpg",
+    "roleType": "director",
+    "desc": "Ensures all organizational undertakings align with regulatory frameworks, governing policies, and structural constitutional compliance.",
+    "isFeatured": false,
+    "delay": 5,
+    "socials": {
+      "facebook": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Ms.  Fatima Laika Maddili ",
+    "position": "Director for Legal Affairs",
+    "img": "assets/img/Directors/MADDILI_DRCTRLEGAL.jpg",
+    "roleType": "director",
+    "desc": "Ensures all organizational undertakings align with regulatory frameworks, governing policies, and structural constitutional compliance.",
+    "isFeatured": false,
+    "delay": 5,
+    "socials": {
+      "facebook": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Ms. Cee Gi Ong",
+    "position": "Director for Research",
+    "img": "assets/img/Directors/ONG_DRCTRES.png",
+    "roleType": "director",
+    "desc": "Leads data-driven research initiatives, community impact assessments, and analytics generation to back the alliance's advocacy goals.",
+    "isFeatured": false,
+    "delay": 7,
+    "socials": {
+      "facebook": "#",
+      "linkedin": "#"
+    }
+  }
+]

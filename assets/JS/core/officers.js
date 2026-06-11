@@ -1,6 +1,13 @@
 export async function initOfficers() {
-  const gridContainer = document.getElementById('officers-data-grid');
-  if (!gridContainer) return;
+  const landingGrid = document.getElementById('officers-data-grid');
+  if (!landingGrid) return;
+
+  // Grab the fresh container wrappers and trigger elements from our template update
+  const allOfficersGrid = document.getElementById('all-officers-data-grid');
+  const landingViewWrapper = document.getElementById('officers-landing-view');
+  const directoryViewWrapper = document.getElementById('officers-directory-view');
+  const goDirectoryBtn = document.getElementById('btn-go-directory');
+  const backBtn = document.getElementById('btn-back-to-landing');
 
   try {
     // 1. Fetch your JSON context data
@@ -8,8 +15,12 @@ export async function initOfficers() {
     if (!response.ok) throw new Error('Could not retrieve officers data model.');
     const officers = await response.json();
 
-    // 2. Loop and generate markup templates dynamically
-    const gridHTML = officers.map(officer => {
+    // Arrays to capture categorized markup blocks
+    let landingCardsArray = [];
+    let completeDirectoryArray = [];
+
+    // 2. Loop and map data values matching your exact design structure
+    officers.forEach(officer => {
       const featuredClass = officer.isFeatured ? 'officer-featured' : '';
       const delayClass = officer.delay > 0 ? `reveal-delay-${officer.delay}` : '';
       
@@ -26,31 +37,62 @@ export async function initOfficers() {
           </a>
         `).join('');
 
-      return `
+      const cardHTML = `
         <div class="officer-card ${featuredClass} reveal ${delayClass}">
           <div class="officer-photo-wrap">
             <div class="officer-photo ${placeholderClass}">
               ${photoContent}
             </div>
-            ${officer.isFeatured ? '<div class="officer-badge">Chairperson</div>' : ''}
+            ${officer.isFeatured ? '<div class="officer-badge">Adviser</div>' : ''}
           </div>
           <div class="officer-info">
             <h3>${officer.name}</h3>
             <p class="officer-position">${officer.position}</p>
-            <p class="officer-desc">${officer.desc}</p>
+            <p class="officer-desc">${officer.desc || ''}</p>
             <div class="officer-socials">
               ${socialLinksHTML}
             </div>
           </div>
         </div>
       `;
-    }).join('');
 
-    // 3. Mount populated elements to DOM layout target
-    gridContainer.innerHTML = gridHTML;
+      // Master array gets every single officer element
+      completeDirectoryArray.push(cardHTML);
+
+      // Homepage landing target gets only the 2 Advisers (isFeatured: true)
+      if (officer.isFeatured) {
+        landingCardsArray.push(cardHTML);
+      }
+    });
+
+    // 3. Mount populated collections to their target DOM layout frames
+    landingGrid.innerHTML = landingCardsArray.join('');
+    if (allOfficersGrid) {
+      allOfficersGrid.innerHTML = completeDirectoryArray.join('');
+    }
+
+    // 4. Interaction Events Setup (Smoothly swaps active layouts inside section view)
+    if (goDirectoryBtn && landingViewWrapper && directoryViewWrapper) {
+      goDirectoryBtn.addEventListener('click', () => {
+        landingViewWrapper.style.display = 'none';
+        directoryViewWrapper.style.display = 'block';
+        
+        // Auto-center view to top of component header smoothly
+        document.getElementById('officers').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    if (backBtn && landingViewWrapper && directoryViewWrapper) {
+      backBtn.addEventListener('click', () => {
+        directoryViewWrapper.style.display = 'none';
+        landingViewWrapper.style.display = 'block';
+        
+        document.getElementById('officers').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
 
   } catch (error) {
     console.error('❌ Officers Processing Engine Error:', error);
-    gridContainer.innerHTML = `<p style="color: red; text-align: center;">Unable to display executive leadership listings at this time.</p>`;
+    landingGrid.innerHTML = `<p style="color: red; text-align: center;">Unable to display executive leadership listings at this time.</p>`;
   }
-} 
+}

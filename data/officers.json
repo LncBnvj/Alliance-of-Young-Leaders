@@ -1,11 +1,62 @@
 [
   {
-    "name": "[ Name Here ]",
-    "position": "Chairperson",
-    "img": "",
-    "desc": "Visionary leader guiding AYL's strategic direction, fostering unity across all committees, and representing the organization in all official capacities.",
+    "name": "Mr. Maxil S. Urocay",
+    "position": "National Adviser",
+    "img": "assets/img/Advisers/UROCAY_ADV.jpg",
+    "desc": "Provides high-level strategic counsel, guiding the alliance's nationwide policy directions and anchoring institutional growth at a national scale.",
     "isFeatured": true,
     "delay": 0,
+    "socials": {
+      "facebook": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Mr. Brylle Chriztia C. Anuran",
+    "position": "National General Adviser",
+    "img": "assets/img/Advisers/ANURAN_GENADV.jpg",
+    "desc": "Oversees general organizational compliance, offering mentorship and guidance across day-to-day national operational frameworks.",
+    "isFeatured": true,
+    "delay": 1,
+    "socials": {
+      "facebook": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Mr. Charie Estaquio",
+    "position": "National President",
+    "img": "assets/img/Executive/ESTAQUIO_PRES.jpg",
+    "desc": "Visionary leader steering the organization's national strategic direction, fostering unity across all local chapters, and serving as the primary official representative of AYL.",
+    "isFeatured": false,
+    "delay": 2,
+    "socials": {
+      "facebook": "#",
+      "instagram": "#",
+      "linkedin": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Mr. Franky V. Novio",
+    "position": "National Vice President Internal",
+    "img": "assets/img/Executive/NOVIO_VPINT.jpg",
+    "desc": "Oversees internal organizational development, coordinates core national committees, and strengthens member engagement and chapter alignment nationwide.",
+    "isFeatured": false,
+    "delay": 3,
+    "socials": {
+      "facebook": "https://www.facebook.com/frankienstieennn",
+      "instagram": "https://www.instagram.com/frankienstiennn?igsh=emFnZG94OWF4ZGM0",
+      "linkedin": "#"
+    }
+  },
+  {
+    "name": "Mr. Jairus Philip B. Moridas",
+    "position": "National Vice President External",
+    "img": "assets/img/Executive/MORIDAS_VPEXT.jpg",
+    "desc": "Spearheads external relations, builds high-impact institutional partnerships, and amplifies the alliance's presence and advocacy engagements across various sectors.",
+    "isFeatured": false,
+    "delay": 4,
     "socials": {
       "facebook": "#",
       "instagram": "#",
@@ -13,72 +64,84 @@
     }
   },
   {
-    "name": "[ Name Here ]",
-    "position": "Executive Vice Chairperson",
-    "img": "",
-    "desc": "Supports the Chairperson in all organizational functions and leads internal coordination across committees.",
+    "name": "Mr. Juan Carlos Leon A. Sumbad",
+    "position": "National Secretary-General",
+    "img": "assets/img/Executive/SUMAD_SECGEN.jpg",
+    "desc": "Manages official institutional communications, preserves vital administrative records, and ensures seamless operational workflow throughout the national council.",
     "isFeatured": false,
-    "delay": 1,
+    "delay": 5,
     "socials": {
       "facebook": "#",
       "instagram": "#"
     }
   },
   {
-    "name": "[ Name Here ]",
-    "position": "Secretary-General",
-    "img": "",
-    "desc": "Manages official communications, maintains organizational records, and oversees all administrative functions of AYL.",
+    "name": "Mr. Lance T. Buenviaje ",
+    "position": "National Deputy Secretary-General",
+    "img": "assets/img/Executive/BUENVIAJE_DEPSECGEN.jpg",
+    "desc": "Assists the Secretary-General in administrative oversight, supervising documentation pipelines and supporting national secretarial management tasks.",
     "isFeatured": false,
-    "delay": 2,
+    "delay": 6,
     "socials": {
       "facebook": "#",
       "instagram": "#"
     }
   },
   {
-    "name": "[ Name Here ]",
-    "position": "Treasurer",
-    "img": "",
-    "desc": "Manages the financial affairs of the organization, ensures fiscal transparency, and oversees budgetary planning and allocation.",
+    "name": "Mr. Mark Anthony Mendez",
+    "position": "National General Treasurer",
+    "img": "assets/img/Executive/MENDEZ_GENTREAS.jpg",
+    "desc": "Directs the financial affairs of the national alliance, maintaining absolute transparency, robust fiscal stewardship, and strategic budgetary distributions.",
     "isFeatured": false,
-    "delay": 3,
+    "delay": 7,
     "socials": {
       "facebook": "#",
       "instagram": "#"
     }
   },
   {
-    "name": "[ Name Here ]",
-    "position": "Auditor",
-    "img": "",
-    "desc": "Ensures accountability and integrity in all financial transactions and organizational processes through regular internal reviews.",
+    "name": "Mr. Junathan Tawide Pabia",
+    "position": "National Deputy Treasurer",
+    "img": "assets/img/Executive/PABIA_DEPTREAS.jpg",
+    "desc": "Supports the General Treasurer in ledger management, fee collection tracking, and assisting with accurate financial recording processes.",
     "isFeatured": false,
-    "delay": 1,
+    "delay": 8,
     "socials": {
       "facebook": "#",
       "instagram": "#"
     }
   },
   {
-    "name": "[ Name Here ]",
-    "position": "Director for Programs",
-    "img": "",
-    "desc": "Leads the conceptualization, planning, and execution of AYL's flagship programs and youth development initiatives.",
+    "name": "Mr. Chriz Quelzin Aranza",
+    "position": "National Auditor",
+    "img": "assets/img/Executive/ARANZA_AUD.jpg",
+    "desc": "Enforces strict financial accountability, reviews asset balances, and conducts meticulous internal reviews to maintain integrity within organizational transactions.",
     "isFeatured": false,
-    "delay": 2,
+    "delay": 9,
     "socials": {
       "facebook": "#",
       "instagram": "#"
     }
   },
   {
-    "name": "[ Name Here ]",
-    "position": "Director for External Affairs",
-    "img": "",
-    "desc": "Cultivates strategic partnerships, manages interorganizational relations, and represents AYL in external engagements.",
+    "name": "Mr. Eldrich Vince Loreto",
+    "position": "National Public Information Officer",
+    "img": "assets/img/Executive/LORETO_PIO.jpg",
+    "desc": "Serves as the official voice of the national executive board, managing press releases, statements, and community relations across all public channels.",
     "isFeatured": false,
-    "delay": 3,
+    "delay": 10,
+    "socials": {
+      "facebook": "#",
+      "instagram": "#"
+    }
+  },
+  {
+    "name": "Mr. Christian Rey Cahanap",
+    "position": "National Social Media Manager",
+    "img": "assets/img/Executive/CAHANAP_SOCMEDMNGR.jpg",
+    "desc": "Drives the alliance's digital presence, conceptualizing campaign visuals and managing interactive media narratives to elevate youth engagement online.",
+    "isFeatured": false,
+    "delay": 11,
     "socials": {
       "facebook": "#",
       "instagram": "#"

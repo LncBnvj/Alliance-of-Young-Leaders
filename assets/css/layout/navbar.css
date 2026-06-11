@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute; /* Changed to fixed if u want na kasama sya habang na sscroll */
+  position: fixed; /* Changed to fixed if u want na kasama sya habang na sscroll */
   top: 0; left: 0; right: 0;
   z-index: 1000;
   padding: 0;
@@ -13,7 +13,12 @@
   box-shadow: var(--shadow-sm);
   border-bottom: 1px solid var(--gray-100);
 }
-
+.logo-img {
+  height: 50px;         /* Adjust this height to make your logo look balanced */
+  width: auto;          /* Maintains the aspect ratio of your image */
+  object-fit: contain;
+  transition: var(--transition);
+}
 .nav-container {
   display: flex;
   align-items: center;

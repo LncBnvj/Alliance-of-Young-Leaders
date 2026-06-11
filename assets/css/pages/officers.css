@@ -1,186 +1,258 @@
+/* Container Grid Layout - Hard Locked to exactly 2 columns on desktop sizes */
 .officers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr); /* Split screen in 2 equal spaces */
+  gap: 36px; /* Big premium spacious padding separation */
+  padding: 16px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.officer-featured {
-  grid-column: 1 / -1;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  background: linear-gradient(135deg, var(--blue-deep), var(--blue));
-  color: var(--white);
-  padding: 48px;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
-  overflow: hidden;
-  position: relative;
-}
-
-.officer-featured::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 200px; height: 200px;
-  background: rgba(255,215,0,0.08);
-  border-radius: 50%;
-}
-
-.officer-featured .officer-photo-wrap { 
-  flex-shrink: 0; 
-}
-
-.officer-photo {
-  width: 100px; height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--blue-pale);
-  border: 3px solid var(--gray-200);
-  overflow: hidden;
-}
-
-.officer-featured .officer-photo {
-  width: 140px; height: 140px;
-  border: 4px solid rgba(255,215,0,0.5);
-  background: rgba(255,255,255,0.1);
-}
-
-.officer-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  color: var(--gray-300);
-}
-
-.officer-featured .officer-placeholder {
-  color: rgba(255,255,255,0.3);
-  font-size: 3.5rem;
-}
-
-.officer-badge {
-  display: inline-block;
-  background: var(--yellow);
-  color: var(--blue-deep);
-  font-family: var(--font-main);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  margin-top: 12px;
-}
-
-.officer-featured .officer-info h3 {
-  font-family: var(--font-main);
-  font-size: 1.625rem;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 4px;
-}
-
-.officer-featured .officer-position {
-  font-size: 0.9375rem;
-  color: var(--yellow);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.officer-featured .officer-desc {
-  font-size: 0.9375rem;
-  color: rgba(255,255,255,0.75);
-  line-height: 1.65;
-  margin-bottom: 20px;
-  max-width: 500px;
-}
-
+/* Base Executive Officer Card Structure */
 .officer-card {
   background: var(--white);
-  border: 1px solid var(--gray-100);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
-  text-align: center;
-  transition: var(--transition);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 51, 153, 0.08); /* Sophisticated thin brand-blue border line */
+  border-radius: 20px;
+  padding: 36px; /* Deep luxury padding space */
+  display: flex; 
+  gap: 36px;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+[data-email] {
+    cursor: pointer;
 }
 
 .officer-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--blue-pale);
+  box-shadow: 0 16px 40px rgba(0, 51, 153, 0.1);
+  border-color: rgba(0, 51, 153, 0.18);
 }
 
-.officer-card .officer-photo-wrap {
+/* Distinctive styling highlight for the Adviser cards */
+.adviser-card {
+  border-color: rgba(255, 215, 0, 0.2); /* Soft custom gold-border highlight for advisers */
+  background: linear-gradient(to bottom right, var(--white), rgba(255, 215, 0, 0.01));
+}
+
+/* Left Column Image Frames */
+.officer-photo-wrap {
+  flex-shrink: 0;
+  width: 220px; /* Big, professional width */
+  height: 280px; /* Executive bust height ratio */
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f4f7fa;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.officer-photo {
+  width: 100%;
+  height: 100%;
+  /* 'fill' forces the image to stretch to the box dimensions */
+  object-fit: fill; 
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.officer-card:hover .officer-photo {
+  transform: scale(1.06); /* Scales the image up by 6% */
+}
+
+/* Subtle portrait bottom gradient blur fade */
+.officer-photo-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35px;
+  background: linear-gradient(to top, rgba(244,247,250,0.5), transparent);
+  pointer-events: none;
+}
+
+/* Right Column Data Flow */
+.officer-info {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 16px;
+  min-height: 280px; /* Force sync line height mapping to the image perfectly */
 }
 
-.officer-card .officer-photo {
-  margin: 0 auto 8px;
-}
-
-.officer-card .officer-info h3 {
+.officer-info h3 {
   font-family: var(--font-main);
-  font-size: 1.0625rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  margin-bottom: 4px;
+  font-size: 1.6rem; /* High visual hierarchy size */
+  font-weight: 800;
+  color: #0c0f12;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
 }
 
+/* Position Title Pill Badges */
 .officer-position {
-  font-size: 0.8125rem;
+  display: inline-flex;
+  align-self: flex-start;
+  background: #eef2ff;
+  color: #2563eb;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--blue);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 10px;
+  padding: 6px 16px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
 }
 
-.officer-desc {
-  font-size: 0.875rem;
-  color: var(--gray-500);
-  line-height: 1.6;
-  margin-bottom: 16px;
+/* Unique Warm Gold Badge Variant for Advisers */
+.adviser-badge {
+  background: rgba(255, 215, 0, 0.12) !important;
+  color: #b45309 !important; /* Premium organic dark amber gold */
 }
 
+/* Details Directory Alignment */
+.officer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 18px;
+}
+
+.detail-line {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.detail-line i {
+  color: #2563eb;
+  font-size: 1rem;
+  margin-top: 3px;
+  width: 18px;
+  text-align: center;
+}
+
+#officers {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Match Adviser directory icons to their amber theme color */
+.adviser-card .detail-line i {
+  color: #d97706;
+}
+
+.detail-line a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.detail-line a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icon Anchors */
 .officer-socials {
   display: flex;
   gap: 10px;
-  justify-content: center;
-}
-
-.officer-featured .officer-socials { 
-  justify-content: flex-start; 
+  margin-top: auto; /* Pin to structural bottom block */
+  margin-bottom: 18px;
+  justify-content: flex-start;
 }
 
 .officer-socials a {
-  width: 34px; height: 34px;
-  background: var(--gray-100);
-  color: var(--gray-500);
+  width: 38px;
+  height: 38px;
+  background: #2563eb;
+  color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.875rem;
-  transition: var(--transition);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.adviser-card .officer-socials a {
+  background: #d97706; /* Gold icon circles for advisers */
 }
 
 .officer-socials a:hover {
-  background: var(--blue);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+  filter: brightness(1.1);
+}
+
+/* Profile Action Link Button */
+.btn-profile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 160px;
+  padding: 10px 20px;
+  background: var(--white);
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.adviser-card .btn-profile {
+  border-color: #d97706;
+  color: #d97706;
+}
+
+.btn-profile:hover {
+  background: #2563eb;
   color: var(--white);
-  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
 }
 
-.officer-featured .officer-socials a {
-  background: rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.7);
+.adviser-card .btn-profile:hover {
+  background: #d97706;
+  color: var(--white);
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.25);
 }
 
-.officer-featured .officer-socials a:hover {
-  background: var(--yellow);
-  color: var(--blue-deep);
+/* RESPONSIVE LAYOUT BREAKPOINT - Drops cleanly to 1 column on tablets and mobile viewports */
+@media (max-width: 1150px) {
+  .officers-grid {
+    grid-template-columns: 1fr; /* Responsive fallback */
+  }
+}
+
+@media (max-width: 650px) {
+  .officer-card {
+    flex-direction: column; /* Centered stack view for small mobile phones */
+    align-items: center;
+    text-align: center;
+    padding: 28px;
+  }
+  .officer-position {
+    align-self: center;
+  }
+  .officer-photo-wrap {
+    width: 100%;
+    max-width: 240px;
+    height: 300px;
+  }
+  .officer-socials {
+    justify-content: center;
+  }
+  .btn-profile {
+    margin: 0 auto;
+  }
 }
