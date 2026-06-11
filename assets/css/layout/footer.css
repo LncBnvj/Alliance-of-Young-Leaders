@@ -104,3 +104,16 @@
   font-size: 0.8125rem;
   color: var(--gray-500);
 }
+.footer-logo-img {
+  width: 120px;       /* Adjust size as needed for the footer */
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+/* Optional: if you want a subtle hover effect */
+.footer-logo img:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
