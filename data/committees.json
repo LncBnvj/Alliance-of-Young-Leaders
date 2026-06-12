@@ -2,8 +2,8 @@
   {
     "title": "Committee on Kapaligiran (Environment and Sustainability)",
     "subtitle": "Environment and Sustainability",
-    "logo": "assets/img/Committees Logo/ENVIRONMENT.png",
-    "chair": { "name": "Juan Dela Cruz", "photo": "./assets/img/officers/juan_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
+    "logo": "assets/images/logo/Committees Logo/ENVIRONMENT.png",
+    "chair": { "name": "Juan Dela Cruz", "photo": "assets/images/Officers/Directors/BALANE_DEPDRCTRMEM.png", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Maria Santos", "photo": "./assets/img/officers/maria_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
     "secretary": { "name": "Arnel Pineda", "photo": "./assets/img/officers/arnel_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
     "desc": "Spearheads environmental conservation initiatives, climate action campaigns, and sustainable community programs.",
@@ -19,7 +19,7 @@
   {
     "title": "Committee on Kaayusan (Peace, Order, and Good Governance)",
     "subtitle": "Peace, Order, and Good Governance",
-    "logo": "assets/img/Committees Logo/PEACE AND ORDER & GOOD GOVERNANCE.png",
+    "logo": "assets/images/logo/Committees Logo/PEACE AND ORDER & GOOD GOVERNANCE.png",
     "chair": { "name": "Mark Aquino", "photo": "./assets/img/officers/mark_kaayusan.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Luzviminda Dimagiba", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Reynaldo Reyes", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -35,7 +35,7 @@
   {
     "title": "Committee on Komunikasyon (Communication and Participation)",
     "subtitle": "Communication and Participation",
-    "logo": "assets/img/Committees Logo/COMMUNICATION AND PARTICIPATION.png",
+    "logo": "assets/images/logo/Committees Logo/COMMUNICATION AND PARTICIPATION.png",
     "chair": { "name": "Patricia Reyes", "photo": "./assets/img/officers/patricia_komunikasyon.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Gregorio Sanchez", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Elena Torres", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -51,7 +51,7 @@
   {
     "title": "Committee on Education and Leadership Development",
     "subtitle": "Leadership Development",
-    "logo": "assets/img/Committees Logo/EDUCATION AND LEADERSHIP DEVELOPMENT.png",
+    "logo": "assets/images/logo/Committees Logo/EDUCATION AND LEADERSHIP DEVELOPMENT.png",
     "chair": { "name": "Jonathan Cruz", "photo": "./assets/img/officers/jonathan_education.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Teresa Ramos", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Michael Mendoza", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -67,7 +67,7 @@
   {
     "title": "Committee on Partnership and Community Engagement",
     "subtitle": "Community Engagement",
-    "logo": "assets/img/Committees Logo/PARTNERSHIP AND COMMUNITY ENGAGEMENT.png",
+    "logo": "assets/images/logo/Committees Logo/PARTNERSHIP AND COMMUNITY ENGAGEMENT.png",
     "chair": { "name": "Clarissa Mendoza", "photo": "./assets/img/officers/clarissa_partnership.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Vicente Noble", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Francis Castro", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -83,7 +83,7 @@
   {
     "title": "Committee on Health and Wellness",
     "subtitle": "Public Health & Well-Being",
-    "logo": "assets/img/Committees Logo/health and wellnes.png",
+    "logo": "assets/images/logo/Committees Logo/health and wellnes.png",
     "chair": { "name": "Dr. Angela Castro", "photo": "./assets/img/officers/dr_angela_health.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Manuel Villanueva", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Christina Belmonte", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -99,7 +99,7 @@
   {
     "title": "Committee on Sports, Arts, and Culture",
     "subtitle": "Talent and Heritage Development",
-    "logo": "assets/img/Committees Logo/SPORTS, ARTS AND CULTURES.png",
+    "logo": "assets/images/logo/Committees Logo/SPORTS, ARTS AND CULTURES.png",
     "chair": { "name": "Ricardo Gabriel", "photo": "./assets/img/officers/ricardo_sports.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Antonio Laurel", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Felicia Lopez", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -115,7 +115,7 @@
   {
     "title": "Committee on Disaster Preparedness",
     "subtitle": "Community Resilience",
-    "logo": "assets/img/Committees Logo/disaster preparedness and community resiliences.png",
+    "logo": "assets/images/logo/Committees Logo/disaster preparedness and community resiliences.png",
     "chair": { "name": "Ferdinand Santos", "photo": "./assets/img/officers/ferdinand_disaster.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Jaime Bautista", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Maricel Soriano", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -131,7 +131,7 @@
   {
     "title": "Committee on Agriculture",
     "subtitle": "Food Security & Agri-Tech",
-    "logo": "assets/img/Committees Logo/AGRICULTURE.png",
+    "logo": "assets/images/logo/Committees Logo/AGRICULTURE.png",
     "chair": { "name": "Emmanuel Soriano", "photo": "./assets/img/officers/emmanuel_agriculture.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Pedro Penduko", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Rosa Rosal", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -147,7 +147,7 @@
   {
     "title": "Committee on Mental Health and Well-Being",
     "subtitle": "Awareness and Well-Being",
-    "logo": "assets/img/Committees Logo/MENTAL HEALTH AND WELL BEING.png",
+    "logo": "assets/images/logo/Committees Logo/MENTAL HEALTH AND WELL BEING.png",
     "chair": { "name": "Sofia Valenzuela", "photo": "./assets/img/officers/sofia_mental.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Lucas Alcaraz", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Carmen Miranda", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -163,7 +163,7 @@
   {
     "title": "Committee on Creatives and Media",
     "subtitle": "Digital Content & Multimedia Production",
-    "logo": "assets/img/Committees Logo/CREATIVES AND MEDIA.png",
+    "logo": "assets/images/logo/Committees Logo/CREATIVES AND MEDIA.png",
     "chair": { "name": "Gabriel Villanueva", "photo": "./assets/img/officers/gabriel_creative.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Paolo Ballesteros", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Dominic Roque", "photo": "", "socials": { "fb": "", "li": "" } },
@@ -179,7 +179,7 @@
   {
     "title": "Committee on Gender and Development",
     "subtitle": "Inclusivity and Empowerment",
-    "logo": "assets/img/Committees Logo/GENDER AND DEVELOPMENT.png",
+    "logo": "assets/images/logo/Committees Logo/GENDER AND DEVELOPMENT.png",
     "chair": { "name": "Beatriz Dimaculangan", "photo": "./assets/img/officers/beatriz_gender.jpg", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Mariano Rivera", "photo": "", "socials": { "fb": "", "li": "" } },
     "secretary": { "name": "Justine Win", "photo": "", "socials": { "fb": "", "li": "" } },
