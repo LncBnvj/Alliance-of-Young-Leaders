@@ -1,12 +1,11 @@
 [
   {
-    "title": "Committee on Kapaligiran (Environment and Sustainability)",
+    "title": "Committee on Kapaligiran",
     "subtitle": "Environment and Sustainability",
     "logo": "assets/images/logo/Committees Logo/ENVIRONMENT.png",
     "chair": { "name": "Juan Dela Cruz", "photo": "assets/images/Officers/Directors/BALANE_DEPDRCTRMEM.png", "socials": { "fb": "#", "li": "#" } },
     "viceChair": { "name": "Maria Santos", "photo": "./assets/img/officers/maria_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
     "secretary": { "name": "Arnel Pineda", "photo": "./assets/img/officers/arnel_kapaligiran.jpg", "socials": { "fb": "#", "li": "#" } },
-    "desc": "Spearheads environmental conservation initiatives, climate action campaigns, and sustainable community programs.",
     "mission": "To mobilize youth-led ecological frameworks that advocate for carbon reduction, zero-waste practices, and robust local biodiversity protection across regional networks.",
     "movement": "Project Verde: A national tree-growing campaign and comprehensive plastic neutrality drive launched across local coastal barangays.",
     "delay": 1,
@@ -17,7 +16,7 @@
     ]
   },
   {
-    "title": "Committee on Kaayusan (Peace, Order, and Good Governance)",
+    "title": "Committee on Kaayusan",
     "subtitle": "Peace, Order, and Good Governance",
     "logo": "assets/images/logo/Committees Logo/PEACE AND ORDER & GOOD GOVERNANCE.png",
     "chair": { "name": "Mark Aquino", "photo": "./assets/img/officers/mark_kaayusan.jpg", "socials": { "fb": "#", "li": "#" } },
@@ -33,7 +32,7 @@
     ]
   },
   {
-    "title": "Committee on Komunikasyon (Communication and Participation)",
+    "title": "Committee on Komunikasyon",
     "subtitle": "Communication and Participation",
     "logo": "assets/images/logo/Committees Logo/COMMUNICATION AND PARTICIPATION.png",
     "chair": { "name": "Patricia Reyes", "photo": "./assets/img/officers/patricia_komunikasyon.jpg", "socials": { "fb": "#", "li": "#" } },

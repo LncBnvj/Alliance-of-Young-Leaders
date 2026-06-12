@@ -3,7 +3,6 @@
     "name": "Mr. Maxil S. Urocay",
     "position": "National Adviser",
     "img": "assets/images/Advisers/UROCAY_ADV.png",
-    "desc": "Provides high-level strategic counsel, guiding the alliance's nationwide policy directions and anchoring institutional growth at a national scale.",
     "isFeatured": true,
     "delay": 0,
     "socials": {
@@ -15,7 +14,6 @@
     "name": "Mr. Brylle Chriztia C. Anuran",
     "position": "National General Adviser",
     "img": "assets/images/Advisers/ANURAN_GENADV.jpg",
-    "desc": "Oversees general organizational compliance, offering mentorship and guidance across day-to-day national operational frameworks.",
     "isFeatured": true,
     "delay": 1,
     "socials": {
@@ -24,10 +22,9 @@
     }
   },
   {
-    "name": "Mr. Charie Estaquio",
+    "name": "Mr. Charie R. Estaquio",
     "position": "National President",
     "img": "assets/images/Officers/Executive/ESTAQUIO_PRES.png",
-    "desc": "Visionary leader steering the organization's national strategic direction, fostering unity across all local chapters, and serving as the primary official representative of AYL.",
     "isFeatured": false,
     "delay": 2,
     "socials": {
@@ -41,7 +38,6 @@
     "name": "Mr. Franky V. Novio",
     "position": "National Vice President Internal",
     "img": "assets/images/Officers/Executive/NOVIO_VPINT.jpg",
-    "desc": "Oversees internal organizational development, coordinates core national committees, and strengthens member engagement and chapter alignment nationwide.",
     "isFeatured": false,
     "delay": 3,
     "socials": {
@@ -54,7 +50,6 @@
     "name": "Mr. Jairus Philip B. Moridas",
     "position": "National Vice President External",
     "img": "assets/images/Officers/Executive/MORIDAS_VPEXT.jpg",
-    "desc": "Spearheads external relations, builds high-impact institutional partnerships, and amplifies the alliance's presence and advocacy engagements across various sectors.",
     "isFeatured": false,
     "delay": 4,
     "socials": {
@@ -67,7 +62,6 @@
     "name": "Mr. Juan Carlos Leon A. Sumbad",
     "position": "National Secretary-General",
     "img": "assets/images/Officers/Executive/SUMAD_SECGEN.png",
-    "desc": "Manages official institutional communications, preserves vital administrative records, and ensures seamless operational workflow throughout the national council.",
     "isFeatured": false,
     "delay": 5,
     "socials": {
@@ -79,7 +73,6 @@
     "name": "Mr. Lance T. Buenviaje ",
     "position": "National Deputy Secretary-General",
     "img": "assets/images/Officers/Executive/BUENVIAJE_DEPSECGEN.png",
-    "desc": "Assists the Secretary-General in administrative oversight, supervising documentation pipelines and supporting national secretarial management tasks.",
     "isFeatured": false,
     "delay": 6,
     "socials": {
@@ -91,7 +84,6 @@
     "name": "Mr. Mark Anthony Mendez",
     "position": "National General Treasurer",
     "img": "assets/images/Officers/Executive/MENDEZ_GENTREAS.jpg",
-    "desc": "Directs the financial affairs of the national alliance, maintaining absolute transparency, robust fiscal stewardship, and strategic budgetary distributions.",
     "isFeatured": false,
     "delay": 7,
     "socials": {
@@ -103,7 +95,6 @@
     "name": "Mr. Junathan Tawide Pabia",
     "position": "National Deputy Treasurer",
     "img": "assets/images/Officers/Executive/PABIA_DEPTREAS.png",
-    "desc": "Supports the General Treasurer in ledger management, fee collection tracking, and assisting with accurate financial recording processes.",
     "isFeatured": false,
     "delay": 8,
     "socials": {
@@ -115,7 +106,6 @@
     "name": "Mr. Chriz Quelzin Aranza",
     "position": "National Auditor",
     "img": "assets/images/Officers/Executive/ARANZA_AUD.png",
-    "desc": "Enforces strict financial accountability, reviews asset balances, and conducts meticulous internal reviews to maintain integrity within organizational transactions.",
     "isFeatured": false,
     "delay": 9,
     "socials": {
@@ -127,7 +117,6 @@
     "name": "Mr. Eldrich Vince Loreto",
     "position": "National Public Information Officer",
     "img": "assets/images/Officers/Executive/LORETO_PIO.jpg",
-    "desc": "Serves as the official voice of the national executive board, managing press releases, statements, and community relations across all public channels.",
     "isFeatured": false,
     "delay": 10,
     "socials": {
@@ -139,7 +128,6 @@
     "name": "Mr. Christian Rey Cahanap",
     "position": "National Social Media Manager",
     "img": "assets/images/Officers/Executive/CAHANAP_SOCMEDMNGR.png",
-    "desc": "Drives the alliance's digital presence, conceptualizing campaign visuals and managing interactive media narratives to elevate youth engagement online.",
     "isFeatured": false,
     "delay": 11,
     "socials": {

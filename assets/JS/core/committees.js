@@ -14,24 +14,26 @@ export async function initCommittees() {
   if (!landingGrid) return;
 
   // --- HELPERS ---
-  const renderAvatar = (person, iconClass) => {
-    const photo = (typeof person === 'object' && person.photo) ? person.photo : null;
-    return (photo && photo.trim() !== "") 
-      ? `<img src="${photo}" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />` 
-      : `<i class="${iconClass}"></i>`;
-  };
+const renderAvatar = (person, fallbackIconClass) => {
+  const photo = (person && typeof person === 'object' && person.photo) ? person.photo.trim() : '';
+  
+  // Strict layout check to ensure broken img tags are never injected
+  if (photo !== "" && photo !== null && photo !== undefined) {
+    return `<img src="${photo}" alt="Profile Avatar" onerror="this.onerror=null; this.parentNode.innerHTML='<i class=\'${fallbackIconClass}\'></i>';">`;
+  }
+  return `<i class="${fallbackIconClass}"></i>`;
+};
 
-  const renderSocials = (person) => {
-    if (person && typeof person === 'object' && person.socials) {
-      return `
-        <div class="formal-socials-row" style="display: flex; gap: 8px; margin-top: 10px; justify-content: center;">
-          ${person.socials.fb ? `<a href="${person.socials.fb}" target="_blank" class="formal-social-icon-btn" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; background: #3b5998; color: white; border-radius: 50%;"><i class="fab fa-facebook-f"></i></a>` : ''}
-          ${person.socials.li ? `<a href="${person.socials.li}" target="_blank" class="formal-social-icon-btn" style="width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; background: #0077b5; color: white; border-radius: 50%;"><i class="fab fa-linkedin-in"></i></a>` : ''}
-        </div>`;
-    }
-    return '';
-  };
-
+const renderSocials = (person) => {
+  if (person && typeof person === 'object' && person.socials) {
+    return `
+      <div class="formal-socials-row">
+        ${person.socials.fb ? `<a href="${person.socials.fb}" target="_blank" class="formal-social-icon-btn"><i class="fab fa-facebook-f"></i></a>` : ''}
+        ${person.socials.li ? `<a href="${person.socials.li}" target="_blank" class="formal-social-icon-btn"><i class="fab fa-linkedin-in"></i></a>` : ''}
+      </div>`;
+  }
+  return '';
+};
   try {
     const response = await fetch('./data/committees.json');
     const committees = await response.json();
@@ -50,7 +52,6 @@ export async function initCommittees() {
     exitPageBtn?.addEventListener('click', () => {
       pageViewWrapper.style.display = 'none';
       sectionHeader.style.display = 'block';
-      // Returns user to directory view by default
       directoryViewWrapper.style.display = 'block'; 
     });
 
@@ -58,25 +59,23 @@ export async function initCommittees() {
     function buildGridCard(c, index) {
       const chairName = typeof c.chair === 'object' ? c.chair.name : c.chair;
       return `
-        <div class="committee-card reveal committee-clickable-entry-node" data-index="${index}" style="cursor: pointer;">
+       <div class="committee-card reveal committee-clickable-entry-node" data-index="${index}" style="cursor: pointer;">
           <div class="committee-header">
-            <div class="committee-icon" style="display: flex; align-items: center; justify-content: center; overflow: hidden; background: #ffffff;">
-              <img src="${c.logo || './assets/img/placeholder-logo.png'}" alt="${c.title}" style="max-width: 90%; max-height: 90%; object-fit: contain;">
-            </div>
-            <div>
-              <h3>${c.title}</h3>
-              <p class="committee-chair">${chairName || 'TBA'}</p>
-            </div>
+            <div class="committee-icon">
+             <img src="${c.logo || './assets/img/placeholder-logo.png'}" alt="${c.title}" style="max-width: 85%; max-height: 85%; object-fit: contain;">
+           </div>
+           <div>
+             <h3>${c.title}</h3>
+             <!-- Prefixed label right before the dynamic variable -->
+              <p class="committee-chair">Chairperson: ${chairName || 'TBA'}</p>
+           </div>
           </div>
-          <p class="committee-desc">${c.desc}</p>
         </div>`;
     }
-
     landingGrid.innerHTML = committees.slice(0, 2).map((c, i) => buildGridCard(c, i)).join('');
     if (allCommitteesGrid) allCommitteesGrid.innerHTML = committees.map((c, i) => buildGridCard(c, i)).join('');
 
-    // --- CLICK ROUTER (Event Delegation) ---
-    // We attach to the container elements instead of a non-existent #committees ID
+    // --- CLICK ROUTER ---
     const clickContainers = [landingGrid, allCommitteesGrid];
     clickContainers.forEach(container => {
       container?.addEventListener('click', (e) => {
@@ -94,21 +93,26 @@ export async function initCommittees() {
         const rosterGrid = document.getElementById('committee-page-officers-grid');
         rosterGrid.innerHTML = `
           <div class="committee-roster-grid-system">
-            ${['chair', 'viceChair', 'secretary'].map(role => committee[role] ? `
-              <div class="formal-officer-profile-card" style="padding: 20px;">
-                <div class="formal-officer-photo-box" style="width: 100px; height: 100px;">${renderAvatar(committee[role], 'fas fa-user-tie')}</div>
+            ${[
+              { key: 'chair', label: 'Chairperson', accent: 'chair-accent' },
+              { key: 'viceChair', label: 'Vice Chairperson', accent: 'vice-accent' },
+              { key: 'secretary', label: 'Secretary', accent: 'sec-accent' }
+            ].map(role => committee[role.key] ? `
+              <div class="formal-officer-profile-card ${role.accent}">
+                <div class="formal-officer-photo-box">${renderAvatar(committee[role.key], 'fas fa-user-tie')}</div>
                 <div class="formal-officer-text-stack">
-                  <h3>${committee[role].name || committee[role]}</h3>
-                  <span class="formal-role-chip">${role.replace(/([A-Z])/g, ' $1').toUpperCase()}</span>
-                  ${renderSocials(committee[role])}
+                  <span class="formal-role-chip">${role.label}</span>
+                  <h3>${committee[role.key].name || committee[role.key]}</h3>
+                  ${renderSocials(committee[role.key])}
                 </div>
               </div>` : '').join('')}
           </div>
           <div class="committee-roster-grid-system">
             ${committee.members.map(member => `
-              <div class="formal-officer-profile-card" style="padding: 20px;">
-                <div class="formal-officer-photo-box" style="width: 70px; height: 70px;">${renderAvatar(member, 'fas fa-user')}</div>
+              <div class="formal-officer-profile-card member-accent">
+                <div class="formal-officer-photo-box" style="width: 90px; height: 90px; border-radius: 12px !important;">${renderAvatar(member, 'fas fa-user')}</div>
                 <div class="formal-officer-text-stack">
+                  <span class="formal-role-chip" style="background: #f8fafc; color: #64748b;">Committee Member</span>
                   <h3>${typeof member === 'object' ? member.name : member}</h3>
                   ${renderSocials(typeof member === 'object' ? member : null)}
                 </div>

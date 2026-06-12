@@ -56,8 +56,7 @@
 .officer-photo {
   width: 100%;
   height: 100%;
-  /* 'fill' forces the image to stretch to the box dimensions */
-  object-fit: fill; 
+  object-fit: cover; /* Changed from 'fill' to avoid distorted facial stretching */
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .officer-card:hover .officer-photo {
@@ -81,16 +80,18 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  min-height: 280px; /* Force sync line height mapping to the image perfectly */
+  height: auto; 
+  align-self: center; 
+  box-sizing: border-box;
 }
 
 .officer-info h3 {
   font-family: var(--font-main);
-  font-size: 1.6rem; /* High visual hierarchy size */
+  font-size: 1.45rem; /* Balanced hierarchy scale */
   font-weight: 800;
   color: #0c0f12;
-  margin: 0 0 8px 0;
-  line-height: 1.2;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
 }
 
 /* Position Title Pill Badges */
@@ -100,83 +101,42 @@
   background: #eef2ff;
   color: #2563eb;
   font-family: var(--font-main);
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 6px 16px;
+  font-size: 0.75rem; 
+  font-weight: 700;
+  padding: 4px 12px;
   border-radius: 24px;
-  margin-bottom: 20px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+  text-transform: uppercase; 
 }
 
-/* Unique Warm Gold Badge Variant for Advisers */
-.adviser-badge {
-  background: rgba(255, 215, 0, 0.12) !important;
-  color: #b45309 !important; /* Premium organic dark amber gold */
-}
-
-/* Details Directory Alignment */
-.officer-details {
+/* Bottom Actions Panel Container - Dynamic Anchor Lock */
+.officer-actions-wrapper {
+  margin-top: auto; /* Dynamic flex push down directly locks panel to card base line */
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
-  border-top: 1px dashed #e2e8f0;
-  padding-top: 18px;
-}
-
-.detail-line {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  font-size: 0.9rem;
-  color: #4a5568;
-  line-height: 1.5;
-}
-
-.detail-line i {
-  color: #2563eb;
-  font-size: 1rem;
-  margin-top: 3px;
-  width: 18px;
-  text-align: center;
-}
-
-#officers {
-  border-bottom: 1px solid #e2e8f0;
-}
-
-/* Match Adviser directory icons to their amber theme color */
-.adviser-card .detail-line i {
-  color: #d97706;
-}
-
-.detail-line a {
-  color: #2563eb;
-  text-decoration: none;
-}
-.detail-line a:hover {
-  text-decoration: underline;
+  width: 100%;
 }
 
 /* Social Icon Anchors */
 .officer-socials {
   display: flex;
-  gap: 10px;
-  margin-top: auto; /* Pin to structural bottom block */
-  margin-bottom: 18px;
+  gap: 8px;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .officer-socials a {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   background: #2563eb;
   color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: all 0.2s ease;
 }
 
@@ -190,6 +150,10 @@
   filter: brightness(1.1);
 }
 
+.adviser-card .officer-socials a:hover {
+  box-shadow: 0 6px 14px rgba(217, 119, 6, 0.35);
+}
+
 /* Profile Action Link Button */
 .btn-profile {
   display: inline-flex;
@@ -198,12 +162,12 @@
   gap: 8px;
   width: 100%;
   max-width: 160px;
-  padding: 10px 20px;
+  padding: 8px 16px;
   background: var(--white);
   border: 1.5px solid #2563eb;
   color: #2563eb;
   font-family: var(--font-main);
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   font-weight: 700;
   border-radius: 24px;
   text-decoration: none;
@@ -227,10 +191,18 @@
   box-shadow: 0 6px 16px rgba(217, 119, 6, 0.25);
 }
 
-/* RESPONSIVE LAYOUT BREAKPOINT - Drops cleanly to 1 column on tablets and mobile viewports */
+#officers {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINT */
 @media (max-width: 1150px) {
   .officers-grid {
     grid-template-columns: 1fr; /* Responsive fallback */
+  }
+  .officer-info {
+    height: auto;
+    min-height: 280px;
   }
 }
 
@@ -241,6 +213,11 @@
     text-align: center;
     padding: 28px;
   }
+  .officer-info {
+    height: auto;
+    min-height: auto;
+    width: 100%;
+  }
   .officer-position {
     align-self: center;
   }
@@ -248,6 +225,11 @@
     width: 100%;
     max-width: 240px;
     height: 300px;
+    margin-bottom: 16px;
+  }
+  .officer-actions-wrapper {
+    margin-top: 20px;
+    align-items: center;
   }
   .officer-socials {
     justify-content: center;
