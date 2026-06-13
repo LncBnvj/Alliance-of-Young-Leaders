@@ -10,7 +10,7 @@ import { initActiveNav } from './core/activeNav.js';
 import { initCommittees } from './core/committees.js';
 import { initGallery } from './core/gallery.js';
 import { initNavbar } from './core/navbar.js';
-import { initLogoText } from './core/logoText.js';
+import { initLogoText } from './core/logotext.js'; // Fixed to lowercase 'logotext.js'
 import { initOfficers } from './core/officers.js';
 import { initDirectors } from './core/directors.js';
 import { initPrograms } from './core/programs.js';
@@ -19,7 +19,7 @@ import { initSmoothScroll } from './core/smoothScroll.js';
 
 import { initBackToTop } from './ui/back-to-top.js';
 import { initLightbox } from './ui/lightbox.js';
-import { initPdfViewer } from './ui/pdfViewer.js';
+import { initPdfViewer } from './ui/pdfviewer.js'; // Fixed to lowercase 'pdfviewer.js'
 
 import { initScrollManager } from './utils/scrollManager.js';
 
