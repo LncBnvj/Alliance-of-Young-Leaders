@@ -1,20 +1,10 @@
-export function initScrollManager(
-    callbacks
-) {
-    let ticking = false;
-    window.addEventListener(
-        'scroll',
-        () => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    callbacks.forEach(
-                        fn => fn()
-                    );
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        },
-        { passive: true }
-    );
+// Ensure your scroll manager looks something like this
+export function initScrollManager(handlers) {
+  window.addEventListener('scroll', () => {
+    handlers.forEach(handler => {
+      if (typeof handler === 'function') {
+        handler(); // This triggers the updateNavbar function
+      }
+    });
+  });
 }
