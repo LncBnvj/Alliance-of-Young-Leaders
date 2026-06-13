@@ -19,7 +19,7 @@
 }
 
 .program-image {
-  position: relative;
+  position: relative; 
   height: 160px;
   overflow: hidden;
 }
